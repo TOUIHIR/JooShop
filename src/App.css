@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Baskervville:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.baskervville-regular {
+  font-family: "Baskervville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Snipcart Button Primary */
+.snipcart-button-primary {
+  background-color: #6b7280; /* gray.500 */
+  color: #f9fafb; /* gray.100 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.snipcart-button-primary:hover {
+  background-color: #4b5563; /* gray.700 */
+  color: #d1d5db; /* gray.300 */
+}
+
+/* Snipcart Button Icon Secondary */
+.snipcart-button-icon.is-secondary {
+  color: black; /* white */
+  border-color: transparent;
+  background-color: #f3f4f6; /* light gray */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.snipcart-button-icon.is-secondary:hover {
+  color: #ffffff; /* white */
+  background-color: #6b7280; /* gray.500 */
+}
+
+/* Snipcart Cart Header Icon */
+.snipcart-cart-header__icon {
+  color: #6b7280; /* gray.500 */
+}
+
+/* Snipcart Button Secondary */
+.snipcart-button-secondary {
+  color: #6b7280; /* gray.500 */
+  border-color: transparent;
+  background-color: #f9fafb; /* gray.100 */
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.snipcart-button-secondary:hover {
+  color: #f9fafb; /* gray.100 */
+  border-color: transparent;
+  background-color: #4b5563; /* gray.700 */
+}
+
+/* Splash Screen */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.splash-screen--fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-screen__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(380px, 90vw);
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.splash-screen__logo {
+  width: clamp(96px, 18vw, 160px);
+  max-width: 160px;
+  animation: splash-logo-appear 1s ease forwards;
+}
+
+.splash-screen__title {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 9999px;
+  background-color: #e5e7eb;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.progress-bar__fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #4f46e5);
+  border-radius: 9999px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1.8s ease;
+}
+
+.progress-bar__fill--active {
+  transform: scaleX(1);
+}
+
+.progress-bar__label {
+  margin-top: 0.75rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+@keyframes splash-logo-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
